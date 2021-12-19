@@ -1,0 +1,6 @@
+plugins {
+    id 'java'
+}
+
+group 'me.iipho3nix.loggers'
+version '1.0'
