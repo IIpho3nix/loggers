@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.zip.GZIPOutputStream;
 
 public class Loggerinitializer {
-    static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-YYYY-hh-mm-ss");
+    static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-YYYY-HH-mm-ss");
     public static File logfile = null;
     public static void init(File logfolder) {
         if(!logfolder.exists()) {
