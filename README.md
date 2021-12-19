@@ -1,5 +1,5 @@
 # loggers
-a logging libary made in 30 minutes at a 3am
+a logging libary made in 30 minutes at 3am
 
 
 # How To Use
