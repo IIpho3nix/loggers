@@ -7,7 +7,7 @@ a logging libary made in 30 minutes at a 3am
 Call Loggerinitializer's init method with the folder you want the logs stored in passed as a java File class like this
 
 ```java
-  Loggerinitializer.init(new File("logs"));
+Loggerinitializer.init(new File("logs"));
 ```
 
 then you can create a new instance of Logger from anywhere in your project like this
