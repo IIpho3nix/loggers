@@ -5,19 +5,16 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.zip.GZIPOutputStream;
 
 public class Loggerinitializer {
-    static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ss-mm-HH-dd-MM-YYYY");
-    public static File logfile = null;
     public static void init(File logfolder) {
         if(!logfolder.exists()) {
             logfolder.mkdir();
         }
         File latestlog = new File(logfolder.getAbsolutePath() + "/latest.log");
         if(latestlog.exists()) {
-            gziplog(latestlog.getAbsolutePath(), logfolder.getAbsolutePath() + "/" + dtf.format(LocalDateTime.now()) + ".log.gz");
+            gziplog(latestlog.getAbsolutePath(), logfolder.getAbsolutePath() + "/" + LoggerUtils.dtf.format(LocalDateTime.now()) + ".log.gz");
             latestlog.delete();
         }
         try {
@@ -25,7 +22,25 @@ public class Loggerinitializer {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        logfile = latestlog;
+        LoggerUtils.logfile = latestlog;
+    }
+
+    public static void initcrashhandler(File crashfolder) {
+        if(!crashfolder.exists()) {
+            crashfolder.mkdir();
+        }
+        File latestcrash = new File(crashfolder.getAbsolutePath() + "/latest.crash");
+        if(latestcrash.exists()) {
+            gziplog(latestcrash.getAbsolutePath(), crashfolder.getAbsolutePath() + "/" + LoggerUtils.dtf.format(LocalDateTime.now()) + ".crash.gz");
+            latestcrash.delete();
+        }
+        try {
+            latestcrash.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        LoggerUtils.crashfile = latestcrash;
+        Thread.setDefaultUncaughtExceptionHandler(new CrashHandler());
     }
 
     private static void gziplog(String file, String gzipFile) {
