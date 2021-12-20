@@ -1,4 +1,10 @@
 # loggers
+
+![license](https://img.shields.io/github/license/IIpho3nix/loggers)
+![builds](https://img.shields.io/github/workflow/status/IIpho3nix/loggers/Auto%20Release)
+![commit](https://img.shields.io/github/last-commit/IIpho3nix/loggers)
+![size](https://img.shields.io/github/repo-size/IIpho3nix/loggers)
+
 a logging libary made in 30 minutes at 3am
 
 
