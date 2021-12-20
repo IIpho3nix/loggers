@@ -20,6 +20,7 @@ then you can use info warn and error methods on the newly declared varible like 
 
 ```java
 logger.info("this is a test");
+logger.debug("this is a test");
 logger.warn("this is a test");
 logger.error("this is a test");
 ```
@@ -28,6 +29,7 @@ whitch will print this output
 
 ```
 [3:0:0] [NAME/INFO] this is a test
+[3:0:0] [NAME/DEBUG] this is a test
 [3:0:0] [NAME/WARN] this is a test
 [3:0:0] [NAME/ERROR] this is a test
 ```
