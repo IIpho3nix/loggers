@@ -20,6 +20,14 @@ public class Logger {
         }
     }
 
+    public void debug(String log) {
+        if(Loggerinitializer.logfile != null) {
+            log = "[" + dtf.format(LocalDateTime.now()) + "] [" + name + "/DEBUG" + "] " + log;
+            System.out.println(log);
+            write(log);
+        }
+    }
+
     public void warn(String log) {
         if(Loggerinitializer.logfile != null) {
             log = "[" + dtf.format(LocalDateTime.now()) + "] [" + name + "/WARN" + "] " + log;
