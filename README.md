@@ -50,7 +50,7 @@ whitch will print this output
 
 ## Crash Logging
 
-Call Loggerinitializer's init method with the folder you want the logs stored in passed as a java File class like this
+Call Loggerinitializer's initcrashhandler method with the folder you want the crash-logs stored in passed as a java File class like this
 
 ```java
 Loggerinitializer.initcrashhandler(new File("crash-logs"));
