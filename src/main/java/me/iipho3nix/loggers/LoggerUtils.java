@@ -10,6 +10,7 @@ public class LoggerUtils {
     public static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ss-mm-HH-dd-MM-YYYY");
     public static File logfile = null;
     public static File crashfile = null;
+    public static boolean colorful = false;
     public static void writelog(String log, String filepath) {
         try {
             PrintWriter pw = new PrintWriter(new FileWriter(filepath, true));

@@ -15,19 +15,19 @@ a logging libary made in 30 minutes at 3am
 Call Loggerinitializer's init method with the folder you want the logs stored in passed as a java File class like this
 
 ```java
-Loggerinitializer.init(new File("logs"));
+Loggerinitializer.init(new File("logs"), false);
+```
+
+if you want colorful logs then use this instead
+
+```java
+Loggerinitializer.init(new File("logs"), true);
 ```
 
 then you can create a new instance of Logger from anywhere in your project like this
 
 ```java
-Logger logger = new Logger("NAME", false);
-```
-
-or like this if u want colors in the log
-
-```java
-Logger logger = new Logger("NAME", true);
+Logger logger = new Logger("NAME");
 ```
 
 then you can use info warn and error methods on the newly declared varible like this

@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.zip.GZIPOutputStream;
 
 public class Loggerinitializer {
-    public static void init(File logfolder) {
+    public static void init(File logfolder, boolean colorful) {
         if(!logfolder.exists()) {
             logfolder.mkdir();
         }
@@ -22,6 +22,7 @@ public class Loggerinitializer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        LoggerUtils.colorful = colorful;
         LoggerUtils.logfile = latestlog;
     }
 
