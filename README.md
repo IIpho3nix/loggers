@@ -46,21 +46,7 @@ whitch will print this output
 [03:00:00] [TEST/TRACE] this is a trace test var1: abc var2: 1234 test
 ```
 
-if there is a '{}' in the logging string the next varible passed will be replaced by it and if there is none the next varible will be appended to the end of the log
-
-## Custom Logging
-
-You Can Log With A Custom Log Level Like This
-
-```java
-logger.log("custom", "this is a custom test var1: {} var2: {} ", "abc", 1234, "test");
-```
-
-whitch will print this output
-
-```
-[03:00:00] [TEST/CUSTOM] this is a custom test var1: abc var2: 1234 test
-```
+if there is a '{}' in the logging string the next varible passed will be replace it and if there is none the next varible will be appended to the end of the log
 
 ## Crash Logging
 

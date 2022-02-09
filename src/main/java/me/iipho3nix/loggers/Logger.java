@@ -37,7 +37,7 @@ public class Logger {
         log("TRACE", logs);
     }
 
-    public void log(String level, Object... logs) {
+    private void log(String level, Object... logs) {
         if(LoggerUtils.logfile == null) return;
         if(!LoggerUtils.logfile.exists()) {
             try {
