@@ -15,37 +15,51 @@ a logging libary made in 30 minutes at 3am
 Call Loggerinitializer's init method with the folder you want the logs stored in passed as a java File class like this
 
 ```java
-Loggerinitializer.init(new File("logs"), false);
-```
-
-if you want colorful logs then use this instead
-
-```java
-Loggerinitializer.init(new File("logs"), true);
+Loggerinitializer.init(new File("logs"));
 ```
 
 then you can create a new instance of Logger from anywhere in your project like this
 
 ```java
-Logger logger = new Logger("NAME");
+Logger logger = new Logger("test");
 ```
 
-then you can use info warn and error methods on the newly declared varible like this
+then you can use the Built-In Logging methods on the newly declared varible like this
 
 ```java
-logger.info("this is a test");
-logger.debug("this is a test");
-logger.warn("this is a test");
-logger.error("this is a test");
+logger.debug("this is a debug test var1: {} var2: {} ", "abc", 1234, "test");
+logger.error("this is a error test var1: {} var2: {} ", "abc", 1234, "test");
+logger.fatal("this is a fatal test var1: {} var2: {} ", "abc", 1234, "test");
+logger.info("this is a info test var1: {} var2: {} ", "abc", 1234, "test");
+logger.warn("this is a warn test var1: {} var2: {} ", "abc", 1234, "test");
+logger.trace("this is a trace test var1: {} var2: {} ", "abc", 1234, "test");
 ```
 
 whitch will print this output
 
 ```
-[3:0:0] [NAME/INFO] this is a test
-[3:0:0] [NAME/DEBUG] this is a test
-[3:0:0] [NAME/WARN] this is a test
-[3:0:0] [NAME/ERROR] this is a test
+[03:00:00] [TEST/DEBUG] this is a debug test var1: abc var2: 1234 test
+[03:00:00] [TEST/ERROR] this is a error test var1: abc var2: 1234 test
+[03:00:00] [TEST/FATAL] this is a fatal test var1: abc var2: 1234 test
+[03:00:00] [TEST/INFO] this is a info test var1: abc var2: 1234 test
+[03:00:00] [TEST/WARN] this is a warn test var1: abc var2: 1234 test
+[03:00:00] [TEST/TRACE] this is a trace test var1: abc var2: 1234 test
+```
+
+if there is a '{}' in the logging string the next varible passed will be replaced by it and if there is none the next varible will be appended to the end of the log
+
+## Custom Logging
+
+You Can Log With A Custom Log Level Like This
+
+```java
+logger.log("custom", "this is a custom test var1: {} var2: {} ", "abc", 1234, "test");
+```
+
+whitch will print this output
+
+```
+[03:00:00] [TEST/CUSTOM] this is a custom test var1: abc var2: 1234 test
 ```
 
 ## Crash Logging

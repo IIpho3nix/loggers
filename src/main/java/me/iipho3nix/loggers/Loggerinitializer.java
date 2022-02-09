@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 import java.util.zip.GZIPOutputStream;
 
 public class Loggerinitializer {
-    public static void init(File logfolder, boolean colorful) {
+    public static void init(File logfolder) {
         if(!logfolder.exists()) {
             logfolder.mkdir();
         }
@@ -17,12 +17,6 @@ public class Loggerinitializer {
             gziplog(latestlog.getAbsolutePath(), logfolder.getAbsolutePath() + "/" + LoggerUtils.dtf.format(LocalDateTime.now()) + ".log.gz");
             latestlog.delete();
         }
-        try {
-            latestlog.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        LoggerUtils.colorful = colorful;
         LoggerUtils.logfile = latestlog;
     }
 
@@ -34,11 +28,6 @@ public class Loggerinitializer {
         if(latestcrash.exists()) {
             gziplog(latestcrash.getAbsolutePath(), crashfolder.getAbsolutePath() + "/" + LoggerUtils.dtf.format(LocalDateTime.now()) + ".crash.gz");
             latestcrash.delete();
-        }
-        try {
-            latestcrash.createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         LoggerUtils.crashfile = latestcrash;
         Thread.setDefaultUncaughtExceptionHandler(new CrashHandler());
