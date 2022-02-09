@@ -46,7 +46,7 @@ whitch will print this output
 [03:00:00] [TEST/TRACE] this is a trace test var1: abc var2: 1234 test
 ```
 
-if there is a '{}' in the logging string the next varible passed will be replace it and if there is none the next varible will be appended to the end of the log
+if there is a '{}' in the logging string the next varible passed will   replace it and if there is none the next varible will be appended to the end of the log
 
 ## Crash Logging
 
