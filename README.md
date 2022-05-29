@@ -1,12 +1,11 @@
 # loggers
 
-![license](https://img.shields.io/github/license/IIpho3nix/loggers)
-![builds](https://img.shields.io/github/workflow/status/IIpho3nix/loggers/Auto%20Release)
-![commit](https://img.shields.io/github/last-commit/IIpho3nix/loggers)
-![size](https://img.shields.io/github/repo-size/IIpho3nix/loggers)
+![license](https://img.shields.io/github/license/IIpho3nix/loggers?style=for-the-badge)
+![builds](https://img.shields.io/github/workflow/status/IIpho3nix/loggers/Auto%20Release?style=for-the-badge)
+![commit](https://img.shields.io/github/last-commit/IIpho3nix/loggers?style=for-the-badge)
+![size](https://img.shields.io/github/repo-size/IIpho3nix/loggers?style=for-the-badge)
 
 a logging libary made in 30 minutes at 3am
-
 
 # How To Use
 
