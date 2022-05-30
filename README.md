@@ -1,3 +1,5 @@
+<div align="center"> 
+
 # loggers
 
 ![license](https://img.shields.io/github/license/IIpho3nix/loggers?style=for-the-badge)
@@ -61,3 +63,5 @@ thats all you need to do
 
 It Logs And Gzips Old Logs
 It Crash-Logs And Gzips Old Crash-Logs
+
+</div>
