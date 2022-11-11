@@ -36,7 +36,7 @@ logger.warn("this is a warn test var1: {} var2: {} ", "abc", 1234, "test");
 logger.trace("this is a trace test var1: {} var2: {} ", "abc", 1234, "test");
 ```
 
-whitch will print this output
+which will print this output
 
 ```
 [03:00:00] [TEST/DEBUG] this is a debug test var1: abc var2: 1234 test
