@@ -3,7 +3,7 @@
 # loggers
 
 ![license](https://img.shields.io/github/license/IIpho3nix/loggers?style=for-the-badge)
-![builds](https://img.shields.io/github/actions/workflow/status/IIpho3nix/loggers/gradle.yml?branch=main?style=for-the-badge)
+![builds](https://img.shields.io/github/actions/workflow/status/IIpho3nix/loggers/gradle.yml?branch=main&style=for-the-badge)
 ![commit](https://img.shields.io/github/last-commit/IIpho3nix/loggers?style=for-the-badge)
 ![size](https://img.shields.io/github/repo-size/IIpho3nix/loggers?style=for-the-badge)
 
